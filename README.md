@@ -16,21 +16,23 @@ A tool for Satellite incremental yum repository sync management for disconnected
 
 Repository Name | ID | GUID
 --------------- | -- | ----
- Red Hat Enterprise Linux 7 Server - Extras RPMs x86_64 | 4 | 0fc092c8-0040-460e-a338-0f85f49a259b
+Red Hat Enterprise Linux 7 Server - Extras RPMs x86_64 | 4 | 0fc092c8-0040-460e-a338-0f85f49a259b
+Red Hat Ansible Engine 2.9 RPMs for Red Hat Enterprise Linux 7 Server x86_64 | 25 | 2be8e514-a786-4c13-a611-b0a6868397a9
+Red Hat Enterprise Linux 7 Server Kickstart x86_64 7.9 | 12 | 6823aa52-f63e-47a7-a2f4-9a026349f717
 
- _Repository Name_ - Stands for the repository that's going to be incrementally exported. The output for this value can be found by running the next command on the Satellite server -
-
- ```
-<satellite-server> $ hammer repository list
- ```
-
- _ID_ - Stands for the repositories unique ID in the Satellite server. The output for this value can be found by running the next command on the Satellite server -
+ **Repository Name** - Stands for the repository that's going to be incrementally exported. The output for this value can be found by running the next command on the Satellite server -
 
  ```
 <satellite-server> $ hammer repository list
  ```
 
- _GUID_ - Stands for the unique repository ID for the repository export path. In order to validate the GUID, navigate to `/var/lib/pulp/katello-export/`. You will be able to find the value of the GUID from the directory names placed in the `katello-export` path.
+ **ID** - Stands for the repositories unique ID in the Satellite server. The output for this value can be found by running the next command on the Satellite server -
+
+ ```
+<satellite-server> $ hammer repository list
+ ```
+
+ **GUID** - Stands for the unique repository ID for the repository export path. In order to validate the GUID, navigate to `/var/lib/pulp/katello-export/`. You will be able to find the value of the GUID from the directory names placed in the `katello-export` path.
 
  ```
 <satellite-server> $ ls -l /var/lib/pulp/katello-export/
@@ -60,11 +62,11 @@ optional arguments:
 
 **--start_date** - Used to indicate from which date the incremental sync should be taken from. For example - 2021-05-25T12:00:00Z (YYYY-MM-DDTHH:MM:SSZ)
 
-**export_dir** - The directory in which the export will be saved. The directory will be created if not present.
+**--export_dir** - The directory in which the export will be saved. The directory will be created if not present.
 
-**organization_id** - The ID of the organization that contains the repositories. The ID can be taken from the next command - `<satellite-server> $ hammer repository list`
+**--organization_id** - The ID of the organization that contains the repositories. The ID can be taken from the next command - `<satellite-server> $ hammer repository list`
 
-**csv_file** - The CSV files that is going to be used by the tool. The CSV file will contain information regarding the exported repositories.
+**--csv_file** - The CSV files that is going to be used by the tool. The CSV file will contain information regarding the exported repositories.
 
 For example, in order to incrementally sync all the changes in the repositories mentioned in [satellite.csv](./satellite.csv) since the 25th of May 2021. And place the exported archive into the `/tmp/export` directory, you should run the next commands -
 
