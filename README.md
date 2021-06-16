@@ -14,7 +14,7 @@ A tool for Satellite incremental yum repository sync management for disconnected
 
 ## CSV
 
-SSYNC depends on a CSV file to function. The CSV file will contain information regarding the repositories that are going to be synced incrementally. An example csv file can be found [here](.satellite.csv). The CSV file structure will follow the next pattern -
+ssync depends on a CSV file to function. The CSV file will contain information regarding the repositories that are going to be synced incrementally. An example csv file can be found [here](.satellite.csv). The CSV file structure will follow the next pattern -
 
 Repository Name | ID | GUID
 --------------- | -- | ----
