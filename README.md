@@ -12,7 +12,9 @@ A tool for Satellite incremental yum repository sync management for disconnected
 
 * Previously synced Satellite repositories. **The tool is used for incremental updates only**.
 
-* A CSV file that contains information regarding the repositories that are going to be synced incrementally. An example csv file can be found [here](.satellite.csv). The CSV file structure will follow the next pattern -
+## CSV
+
+SSYNC depends on a CSV file to function. The CSV file will contain information regarding the repositories that are going to be synced incrementally. An example csv file can be found [here](.satellite.csv). The CSV file structure will follow the next pattern -
 
 Repository Name | ID | GUID
 --------------- | -- | ----
