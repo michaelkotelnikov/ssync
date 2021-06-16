@@ -79,3 +79,10 @@ For example, in order to incrementally sync all the changes in the repositories 
 
 <satellite-server> $ ./ssync.py --start_date 2021-05-25T12:00:00Z --export_dir /tmp/export --organization_id 1 --csv_file satellite.csv
 ```
+
+The tool will create a tar archive with today's date in the defined export directory -
+
+```
+<satellite-server> $ ls <export-directory> | grep tar
+2021-06-16.tar.gz
+```
